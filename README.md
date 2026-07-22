@@ -1,31 +1,39 @@
 # GridCheck
 
-Offline, deterministic datacenter procurement compliance prototype. It runs entirely in the browser and requires no API key, external model, database, or network service.
+GridCheck is a procurement compliance and decision-support solution for data-center infrastructure.
 
-## Run locally
+## The problem
 
-```powershell
-cd "H:\ACM Hackathon\ETI Hackathon"
-npm.cmd install
-npm.cmd run dev
-```
+Engineering and procurement teams manually compare technical specifications with vendor purchase orders. This process is slow, inconsistent, and can miss critical issues such as undersized breakers, voltage mismatches, insufficient reliability, or delivery risks.
 
-Open `http://127.0.0.1:5173`. Stop the server with `Ctrl+C`.
+## The solution
 
-For a production preview:
+GridCheck automatically compares equipment specifications with procurement orders and produces a transparent compliance report. It identifies deviations, assigns severity, calculates a compliance score, and recommends the next action before equipment is approved.
 
-```powershell
-npm.cmd run build
-npm.cmd start
-```
+The solution supports power, cooling, and networking equipment and includes:
 
-## Offline copilot prototype
+- Five deterministic compliance checks
+- Multi-equipment compliance reporting
+- Vendor quote comparison
+- Suggested RFIs and corrective actions
+- Critical-path and delivery-risk analysis
+- What-if simulations
+- Compliance trend analysis
+- Commissioning checklists
+- Exportable audit records
 
-- Upload JSON, CSV, or key-value TXT documents for local field extraction.
-- Use **Load prepared PDF demo** for a clearly labeled deterministic PDF fixture.
-- Verify extracted fields before the five-rule compliance engine runs.
-- Generate executive guidance and RFI emails from local templates.
-- Ask rule-based questions grounded in the active report and ten local issue records.
-- Inspect cited local source excerpts and export evidence packages.
+## Offline decision support
 
-General PDF, DOCX, and XLSX extraction is intentionally not simulated. Those formats require future local parser libraries or a local model runtime.
+GridCheck includes a local copilot prototype that requires no API key or external service. It provides:
+
+- Local JSON, CSV, and TXT field extraction
+- Template-generated summaries and RFI emails
+- Rule-based questions grounded in the active report
+- Retrieval of similar historical issues from local sample records
+- Source citations, resolution cost, timeline, and lessons learned
+
+The compliance engine remains deterministic and authoritative. The local copilot helps explain results and retrieve supporting evidence but does not change safety thresholds or compliance scores.
+
+## Outcome
+
+GridCheck helps teams detect procurement problems earlier, reduce repeated RFI cycles, compare vendors consistently, preserve lessons from previous projects, and prepare equipment for safe commissioning—all while keeping procurement data on the user’s device.
